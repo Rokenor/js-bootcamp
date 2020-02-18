@@ -51,3 +51,45 @@ function repeatNTimes(action, num) {
 }
 
 repeatNTimes(rage, 13);
+
+// ------------------------
+
+function makeBetbeewFunc(min, max) {
+  return function (val) {
+    return val => min && val <= max;
+  }
+}
+
+const inAgeRange = makeBetbeewFunc(18, 100);
+
+inAgeRange(17) // false
+inAgeRange(68) // true
+
+const isChild = makeBetbeewFunc(0, 18);
+
+isChild(5); // true
+isChild(67); // false
+
+const isInNineties = makeBetbeewFunc(1990, 1999);
+
+isInNineties(1989); // false
+isInNineties(1995); // true
+
+// ------------------------
+
+function multiplyBy(num) {
+  return function(x) {
+    return x * num;
+  }
+} 
+
+const triple = multiplyBy(3);
+
+triple(5); // 15
+
+const double = multiplyBy(2);
+
+double(8); // 16
+
+// ------------------------
+
