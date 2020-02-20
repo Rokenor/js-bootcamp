@@ -35,4 +35,8 @@ const books = [
     authors: ['Amor Towles'],
     rating: 4.36
   }
-]
+];
+
+books.forEach(function(book) {
+  console.log(book.title.toUpperCase())
+})
