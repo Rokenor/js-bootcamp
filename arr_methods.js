@@ -227,7 +227,3 @@ const results = books.filter(book => {
  const descSort = prices.slice().sort((a,b) => b - a);
 
  books.sort((a,b) => a.rating - b.rating);
-
- /**
- * Reduce
-  */
