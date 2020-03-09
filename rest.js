@@ -23,6 +23,33 @@ function sum() {
   // return argsArr.reduce((total, currVal) => {
   //   return total + currVal
   // })
-
-  
 }
+
+// ---------------
+// new way
+
+function sumAll(...nums) {
+  let total = 0;
+  for (let n of nums) total += n;
+  return total;
+}
+
+sumAll(1, 2); //3
+sumAll(1, 2, 3, 4, 5); //15
+
+// ---------------
+
+function sum(...nums) {
+  return nums.reduce((total, currVal) => {
+    return total + currVal;
+  })
+}
+
+function fullName(first, last, ...titles) {
+  console.log(first, last, titles)  
+}
+
+const multiply = (...nums) => (
+  nums.reduce((total, currVal) => total + currVal)
+)
+
