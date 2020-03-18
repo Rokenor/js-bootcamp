@@ -9,7 +9,11 @@ h1.innerText = "Some text" // h1 text will be updated
 
 h1.textContent // same h1.innerText but formatted and with scripts
 
+// ---------------
 
+const form = document.querySelector('form');
+
+form.innerHTML // all HTML in form tag
 
 
 
